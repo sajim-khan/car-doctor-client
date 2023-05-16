@@ -9,7 +9,7 @@ const Banner = () => {
     <div className="carousel w-full h-[650px]">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full rounded-xl" />
-        <div className="absolute h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
+        <div className="absolute rounded-xl h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
           <div className="text-white space-y-8 w-1/3  ">
             <h1 className="text-6xl font-bold">
               Affordable Price For Car Servicing
@@ -38,7 +38,7 @@ const Banner = () => {
       </div>
       <div id="slide2" className="carousel-item relative w-full">
         <img src={img2} className="w-full rounded-xl" />
-        <div className="absolute h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
+        <div className="absolute rounded-xl h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
           <div className="text-white space-y-8 w-1/3  ">
             <h1 className="text-6xl font-bold">
               Affordable Price For Car Servicing
@@ -67,7 +67,7 @@ const Banner = () => {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <img src={img3} className="w-full rounded-xl" />
-        <div className="absolute h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
+        <div className="absolute rounded-xl h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
           <div className="text-white space-y-8 w-1/3  ">
             <h1 className="text-6xl font-bold">
               Affordable Price For Car Servicing
@@ -96,7 +96,7 @@ const Banner = () => {
       </div>
       <div id="slide4" className="carousel-item relative w-full">
         <img src={img4} className="w-full rounded-xl" />
-        <div className="absolute h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
+        <div className="absolute rounded-xl h-full flex items-center pl-12 bg-gradient-to-r from-[#151515] to to-[rgb(21,21,21,0)]">
           <div className="text-white space-y-8 w-1/3  ">
             <h1 className="text-6xl font-bold">
               Affordable Price For Car Servicing
