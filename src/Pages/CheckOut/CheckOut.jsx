@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const CheckOut = () => {
   const service = useLoaderData();
-  const { _id, title } = service;
+  const { title } = service;
 
   return (
     <div className="mb-4">
