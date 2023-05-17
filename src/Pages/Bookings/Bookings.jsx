@@ -13,35 +13,54 @@ const Bookings = () => {
       .then((data) => setBookings(data));
   }, []);
 
+  const handleDelete = (id) => {
+    const proceed = confirm("Are you sure? you want to delete this");
+    if (proceed) {
+      fetch(`http://localhost:5000/bookings/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            alert("deleted successful");
+            const remaining = bookings.filter((booking) => booking._id !== id);
+            setBookings(remaining);
+          }
+        });
+    }
+  };
+
   return (
     <div>
       <h2 className="text-5xl mb-5 text-center">
         Your Bookings: {bookings.length}
       </h2>
-
-      <table className="table w-full">
-        {/* head */}
-        <thead>
-          <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
-            <th className="text-center text-2xl">Name</th>
-            <th className="text-center text-2xl">Job</th>
-            <th className="text-center text-2xl">Price</th>
-            <th className="text-center text-2xl">Date</th>
-            <th className="text-center text-2xl">Status</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {bookings.map((booking) => (
-            <BookingRow key={bookings._id} booking={booking}></BookingRow>
-          ))}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th className="text-end pr-28 text-2xl">Name</th>
+              <th className="text-center text-2xl">Job</th>
+              <th className="text-center text-2xl">Price</th>
+              <th className="text-center text-2xl">Date</th>
+              <th className="text-center text-2xl">Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {bookings.map((booking) => (
+              <BookingRow
+                key={bookings._id}
+                booking={booking}
+                handleDelete={handleDelete}
+              ></BookingRow>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
